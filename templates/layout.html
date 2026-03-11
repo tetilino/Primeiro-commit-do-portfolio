@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Stefany Avelino</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<script src="/static/script.js"></script>
+
+<body>
+
+<div class="container">
+
+<div class="sidebar">
+
+<div class="logo">
+
+<img src="/static/logo.png">
+
+<h2>Stefany Avelino</h2>
+
+</div>
+
+<div class="user">
+
+<img src="/static/avatar.png">
+
+<h3>Stefany Avelino</h3>
+
+<p>Administrador</p>
+
+</div>
+
+<nav>
+
+<nav>
+
+<a href="/dashboard">📊 Dashboard</a>
+
+<a href="/projetos">📁 Projetos</a>
+
+<a href="/kanban">📋 Kanban</a>
+
+<a href="/clientes">👥 Clientes</a>
+
+<a href="/financeiro">💰 Financeiro</a>
+
+<a href="/uploads">📁 Arquivos</a>
+
+<a href="/logout">🚪 Logout</a>
+
+</nav>
+
+</div>
+
+<div class="main">
+
+{% block content %}
+
+{% endblock %}
+
+</div>
+
+</div>
+
+</body>
+
+</html>
+
+<div id="loader">
+   <div class="spinner"></div>
+   <p>Carregando Portfólio...</p>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>

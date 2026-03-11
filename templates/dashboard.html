@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Bem vindo {{session.user}}</h1>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>{{total}}</h2>
+
+<p>Projetos</p>
+
+</div>
+
+<div class="card">
+
+<h2>142</h2>
+
+<p>Tarefas</p>
+
+</div>
+
+<div class="card">
+
+<h2>15%</h2>
+
+<p>Crescimento</p>
+
+</div>
+
+<div class="card">
+
+<h2>99%</h2>
+
+<p>Performance</p>
+
+</div>
+
+</div>
+
+<div class="chart">
+
+<canvas id="grafico"></canvas>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Financeiro</h1>
+
+<table>
+
+<tr>
+
+<th>Cliente</th>
+<th>Valor</th>
+<th>Status</th>
+
+</tr>
+
+{% for f in pagamentos %}
+
+<tr>
+
+<td>{{f.cliente}}</td>
+<td>R$ {{f.valor}}</td>
+<td>{{f.status}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

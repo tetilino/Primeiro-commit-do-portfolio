@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Arquivos</h1>
+
+<table>
+
+<tr>
+
+<th>Nome</th>
+<th>Projeto</th>
+
+</tr>
+
+{% for a in arquivos %}
+
+<tr>
+
+<td>{{a.nome}}</td>
+<td>{{a.projeto}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

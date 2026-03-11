@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Kanban de Projetos</h1>
+
+<div class="kanban">
+
+<div class="coluna">
+
+<h3>A Fazer</h3>
+
+{% for t in tarefas if t.status == "todo" %}
+
+<div class="card">{{t.nome}}</div>
+
+{% endfor %}
+
+</div>
+
+
+<div class="coluna">
+
+<h3>Em andamento</h3>
+
+{% for t in tarefas if t.status == "doing" %}
+
+<div class="card">{{t.nome}}</div>
+
+{% endfor %}
+
+</div>
+
+
+<div class="coluna">
+
+<h3>Concluído</h3>
+
+{% for t in tarefas if t.status == "done" %}
+
+<div class="card">{{t.nome}}</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+{% endblock %}
